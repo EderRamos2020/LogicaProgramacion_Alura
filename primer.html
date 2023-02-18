@@ -1,75 +1,102 @@
-<meta charset="UTF-8">                      <!--formato de codificacion de los caracteres del documento-->
-<h1>Pagina Primera de html</h1>             <!--etiqueta de html para titulos-->
-<br>                                        <!--saltos de linea-->
-<br>
-Ingresa <a href="https://es.wikipedia.org/wiki/JavaScript">aqui</a> para conocer leng. de programacion que estudiaremos
-<br>
-<br>
-<script>
-    //Javascript es el programa que se conecta con html para manipularlo
-    let anio=2022;
+<html>
+    <head>                                              <!--etiqueta cabeza el documento html-->
+        <meta charset="UTF-8">                          <!--formato de codificacion de los caracteres del documento-->
+        <title>Primeras Instrucciones</title>           <!--etiqueta para titulo de la pestaña de navegador-->       
+        <link/>                                         <!--etiqueta para enlazar el este archivo html con archivo js-->
 
-    // funcion que imprime un salto de linea(<br>) en el documento html 
-    function saltarLinea(){
-        document.write("<br>");
-    }
+    </head>
+    <body>
+        <header>                                         <!--cabecera del body-->
+            <h1>Pagina Primera de html</h1>              <!--etiqueta de html para titulos-->
+            <br>                                         <!--saltos de linea-->
+        </header>
 
-    function imprimir(texto){
-        document.write("<big>"+texto+"</big>");
-        saltarLinea();
-    }
+        <main>
+            Ingresa <a href="https://es.wikipedia.org/wiki/JavaScript">aqui</a> para 
+            conocer leng. de programacion que estudiaremos
+            <br>
 
-    //funcion que muestra un pop-up o ventana
-    alert("Este es un pop-up en javascript");   
-    document.write("<h1>Promedio</h1>");                        
+        </main>
 
-    //funcion de js que imprime en el html o dom
-    document.write("promedio de edades de Juan, Pedro y Luis es " );     
-    imprimir((20+25+15)/3);
-    saltarLinea();
-    saltarLinea();
+        <footer></footer>
 
-    document.write("Juan tiene ");
-    document.write(anio-1999 + " años");
-    document.write("<br>");
-    document.write("Pedro nacio en el año ");
-    imprimir(anio-25);
-    imprimir("<br>");
-    imprimir("Luis nacio en el año ");
-    imprimir(anio-15);
-    document.write("<br>");
+        <script>
+            //Javascript es el programa que se conecta con html para manipularlo
+            let anio=2022;
+        
+            // funcion que imprime un salto de linea(<br>) en el documento html 
+            function saltarLinea(){
+                document.write("<br>");
+            }
+        
+            //funcion que recibe un texto para imprimirlo en letras grandes y luego un salto de linea
+            function imprimir(texto){
+                document.write("<big>"+texto+"</big>");
+                saltarLinea();
+            }
+        
+            //funcion que muestra un pop-up o ventana
+            alert("Este es un pop-up en javascript");   
+        
+            //funcion que imprime la palabra promedio como titulo principal en page web
+            document.write("<h1>Promedio</h1>");                        
+        
+            //funcion de js que imprime en el html o dom
+            document.write("promedio de edades de Juan, Pedro y Luis es " );     
+            imprimir((20+25+15)/3);
+            saltarLinea();
+            saltarLinea();
+        
+            document.write("Juan tiene ");
+            document.write(anio-1999 + " años");
+            document.write("<br>");
+            document.write("Pedro nacio en el año ");
+            imprimir(anio-25);
+            imprimir("<br>");
+            imprimir("Luis nacio en el año ");
+            imprimir(anio-15);
+            document.write("<br>");
+        
+            imprimir("<hr>");
+            anio=2023;
+            let edadJime= anio-2005;
+            document.write("Jime tiene " + (edadJime) + " años");
+            saltarLinea();
+            let edadPao=anio-2004;
+            imprimir("Pao tiene " + (edadPao) + " años");
+            saltarLinea();
+            let edadLau=anio-2003;
+            imprimir("Lau tiene "+ (edadLau) + " años");
+            saltarLinea();
+        
+            let pro=( (anio-2005)+(anio-2004)+(anio-2003)) /3;
+            document.write("Promedio de edades de mujeres " + Math.round(pro) );
+            saltarLinea();
+            saltarLinea();
+        
+            document.write("<h2>Tabla de Multiplicar</h2>");
+            let num=8;
+            document.write("tabla "+num+" * "+ 1 + " = "+ num*1 +"<br>");
+            document.write("tabla "+num+" * "+ 2 + " = "+ num*2 +"<br>");
+            imprimir("tabla "+num+" * "+ 3 + " = "+ num*3 +"<br>");
+            imprimir("tabla "+num+" * "+ 4 + " = "+ num*4 +"<br>");
+            imprimir("tabla "+num+" * "+ 5 + " = "+ num*5 +"<br>");
+        
+            let miEdad=35;
+            let edadHermano=33;
+        
+            imprimir("<h3>Diferencia de Edades</h3>");
+            document.write("<big>la diferencia de edad con mi hermano es " + (miEdad-edadHermano) + " años </big>");
+        
+        </script>
 
-    imprimir("<hr>");
-    anio=2023;
-    let edadJime= anio-2005;
-    document.write("Jime tiene " + (edadJime) + " años");
-    saltarLinea();
-    let edadPao=anio-2004;
-    imprimir("Pao tiene " + (edadPao) + " años");
-    saltarLinea();
-    let edadLau=anio-2003;
-    imprimir("Lau tiene "+ (edadLau) + " años");
-    saltarLinea();
+    </body>
+</html>
+                     
 
-    let pro=( (anio-2005)+(anio-2004)+(anio-2003)) /3;
-    document.write("Promedio de edades de mujeres " + Math.round(pro) );
-    saltarLinea();
-    saltarLinea();
 
-    document.write("<h2>Tabla de Multiplicar</h2>");
-    let num=8;
-    document.write("tabla "+num+" * "+ 1 + " = "+ num*1 +"<br>");
-    document.write("tabla "+num+" * "+ 2 + " = "+ num*2 +"<br>");
-    imprimir("tabla "+num+" * "+ 3 + " = "+ num*3 +"<br>");
-    imprimir("tabla "+num+" * "+ 4 + " = "+ num*4 +"<br>");
-    imprimir("tabla "+num+" * "+ 5 + " = "+ num*5 +"<br>");
 
-    let miEdad=35;
-    let edadHermano=33;
 
-    imprimir("<h3>Diferencia de Edades</h3>");
-    document.write("<big>la diferencia de edad con mi hermano es " + (miEdad-edadHermano) + " años </big>");
 
-</script>
 
-</script>
+
