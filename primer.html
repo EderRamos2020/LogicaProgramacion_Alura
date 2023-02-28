@@ -11,14 +11,16 @@
             <br>                                         <!--saltos de linea-->
         </header>
 
-        <main>
+        <main>                                           <!--etiqueta semantica para el cuerpo principal de la web-->
+            
+            <!--etiqueta hipervinculo de una parte del texto--> 
             Ingresa <a href="https://es.wikipedia.org/wiki/JavaScript">aqui</a> para 
             conocer leng. de programacion que estudiaremos
             <br>
 
         </main>
 
-        <footer></footer>
+        <footer></footer>   <!--pie de pagina de la pagina web-->
 
         <script>
             //Javascript es el programa que se conecta con html para manipularlo
@@ -42,11 +44,15 @@
             document.write("<h1>Promedio</h1>");                        
         
             //funcion de js que imprime en el html o dom
-            document.write("promedio de edades de Juan, Pedro y Luis es " );     
+            document.write("promedio de edades de Juan, Pedro y Luis es " );
+            //funcion que imprime operacion matematica     
             imprimir((20+25+15)/3);
+
+            //invoco funcion para imprimir saltos de linea
             saltarLinea();
             saltarLinea();
         
+            //funciones que imprimen los calculos de edad y fecha de nacimiento
             document.write("Juan tiene ");
             document.write(anio-1999 + " años");
             document.write("<br>");
@@ -57,6 +63,7 @@
             imprimir(anio-15);
             document.write("<br>");
         
+            //invoco funciones para imprimir los calculos de edades 
             imprimir("<hr>");
             anio=2023;
             let edadJime= anio-2005;
@@ -68,12 +75,15 @@
             let edadLau=anio-2003;
             imprimir("Lau tiene "+ (edadLau) + " años");
             saltarLinea();
-        
+            
+            //se halla el promedio entre las 3 edades calculadas anteriormente 
             let pro=( (anio-2005)+(anio-2004)+(anio-2003)) /3;
+            //invoco funcion Math.round que retorna el promedio redondeado al entero mas cercano
             document.write("Promedio de edades de mujeres " + Math.round(pro) );
             saltarLinea();
             saltarLinea();
-        
+            
+            //invoco funciones que imprime primeros cifras de tabla de multiplicar
             document.write("<h2>Tabla de Multiplicar</h2>");
             let num=8;
             document.write("tabla "+num+" * "+ 1 + " = "+ num*1 +"<br>");
@@ -82,9 +92,9 @@
             imprimir("tabla "+num+" * "+ 4 + " = "+ num*4 +"<br>");
             imprimir("tabla "+num+" * "+ 5 + " = "+ num*5 +"<br>");
         
+            //se imprime resta matematica entre edades
             let miEdad=35;
             let edadHermano=33;
-        
             imprimir("<h3>Diferencia de Edades</h3>");
             document.write("<big>la diferencia de edad con mi hermano es " + (miEdad-edadHermano) + " años </big>");
         
